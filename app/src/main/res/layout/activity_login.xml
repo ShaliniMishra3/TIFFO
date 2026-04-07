@@ -11,26 +11,7 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomCard" />
-   <!--
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/dotsIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
-        app:tabIndicatorHeight="0dp"
-        app:tabBackground="@drawable/dot_selector"
-        app:tabPaddingStart="4dp"
-        app:tabPaddingEnd="4dp"
-        app:tabMinWidth="8dp"
-        app:tabMaxWidth="10dp"
-        app:tabPadding="6dp"
-        app:tabGravity="center"
-        app:tabMode="fixed"
-        app:layout_constraintBottom_toBottomOf="@id/viewPager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-        -->
+
     <LinearLayout
         android:id="@+id/dotsLayout"
         android:layout_width="wrap_content"
@@ -86,28 +67,7 @@
                 android:background="@android:color/transparent"
                 android:paddingStart="10dp"/>
         </LinearLayout>
-        <!--
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:background="@drawable/edit_bg"
-            android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🇮🇳  +91"
-                android:padding="10dp"
-                android:textSize="14sp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Enter Phone Number"
-                android:background="@android:color/transparent"/>
-        </LinearLayout>
-        -->
         <!-- CHECKBOX -->
         <CheckBox
             android:layout_width="wrap_content"

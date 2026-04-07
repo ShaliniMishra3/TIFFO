@@ -34,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var dotsIndicator: LinearLayout
     private lateinit var ccp: CountryCodePicker
     private var currentPhone: String? = null
-  //  private lateinit var dotsLayout: LinearLayout
     private lateinit var dots: Array<ImageView>
     private val locationPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) {isGranted->
@@ -67,7 +66,6 @@ class LoginActivity : AppCompatActivity() {
             }
         })
         setupSlider()
-        // 🔥 Delay to show UI first, then popup comes on top
         window.decorView.post {
             checkLocationPermission()
         }
@@ -89,7 +87,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"Enter a valid number",Toast.LENGTH_SHORT).show()
             }
         }
-       // TabLayoutMediator(dotsIndicator, viewPager) { _, _ -> }.attach()
     }
     private fun updateDots(position: Int) {
         for (i in dots.indices) {
