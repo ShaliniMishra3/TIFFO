@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890211950396",
+    "project_id": "tiffo-b6083",
+    "storage_bucket": "tiffo-b6083.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890211950396:android:ff64eed73de9ee40898839",
+        "android_client_info": {
+          "package_name": "com.example.tiffo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPU2L2CigC6B7pMQHdW4AjPid5Fj45Idw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
