@@ -80,12 +80,17 @@ class LoginActivity : AppCompatActivity() {
         val btnContinue= findViewById<MaterialButton>(R.id.btnContinue)
 
         btnContinue.setOnClickListener {
+            /*
             if(ccp.isValidFullNumber){
                 val currentPhone= ccp.fullNumberWithPlus
                 sendOtp(currentPhone!!)
             }else{
                 Toast.makeText(this,"Enter a valid number",Toast.LENGTH_SHORT).show()
             }
+
+             */
+            val intent=Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
     private fun updateDots(position: Int) {

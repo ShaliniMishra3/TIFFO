@@ -1,7 +1,9 @@
 package com.example.tiffo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +22,11 @@ class NotificationActivity : AppCompatActivity() {
             insets
         }
         val imageView = findViewById<ImageView>(R.id.gifBackground)
+        val gotoMain=findViewById<TextView>(R.id.btnNotNow)
+        gotoMain.setOnClickListener {
+            val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         Glide.with(this)
             .asGif()
