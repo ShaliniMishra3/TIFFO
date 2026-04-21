@@ -55,7 +55,7 @@ class SplashActivity : AppCompatActivity() {
         // 🔥 Observe navigation
         viewModel.navigate.observe(this) {
             if (it) {
-                startActivity(Intent(this, OnboardingActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             }
         }
