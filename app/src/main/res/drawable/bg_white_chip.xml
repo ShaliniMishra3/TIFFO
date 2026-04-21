@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/bg_white_chip.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FBF8D70A" /> <corners android:radius="8dp" />
+    <solid android:color="#FFFFFF"/>
+    <corners android:radius="18dp"/>
 </shape>

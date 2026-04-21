@@ -23,10 +23,7 @@ class CategoryAdapter(private val list: List<Category>):
         val view= LayoutInflater.from(parent.context).inflate(R.layout.item_category,parent,false)
         return CategoryHolder(view)
     }
-
-
     override fun onBindViewHolder(holder: CategoryHolder, position: Int) {
-
         val item=list[position]
         holder.txName.text=item.name
         holder.imgCategory.setImageResource(item.image)
