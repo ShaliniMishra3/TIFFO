@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         val tagline= findViewById<TextView>(R.id.tagline)
 
         viewModel= ViewModelProvider(this)[SplashViewModel::class.java]
-        // 🔥 Animation
+        // Animation
         logo.animate()
             .alpha(1f)
             .scaleX(1.1f)
@@ -49,10 +49,9 @@ class SplashActivity : AppCompatActivity() {
             .setStartDelay(600)
             .start()
 
-        // 🔥 Start timer
+        // Start timer
         viewModel.startTimer()
-
-        // 🔥 Observe navigation
+        // Observe navigation
         viewModel.navigate.observe(this) {
             if (it) {
                 startActivity(Intent(this, LoginActivity::class.java))

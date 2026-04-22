@@ -6,7 +6,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tiffo.databinding.ActivityMainBinding
@@ -29,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         binding.rvCategory.layoutManager= GridLayoutManager(this,4)
         binding.rvPopular.layoutManager= LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         binding.rvNear.layoutManager= LinearLayoutManager(this)
-
 
         viewModel.categories.observe(this){
             binding.rvCategory.adapter= CategoryAdapter(it)

@@ -15,7 +15,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/bg_offer_gradient"
         android:padding="20dp">
-
         <View
             android:layout_width="150dp"
             android:layout_height="150dp"
