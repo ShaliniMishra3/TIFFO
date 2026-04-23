@@ -1,3 +1,99 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:background="#F4E3C9"> <!-- soft food tone -->
+
+        <!-- Light circle background (design element) -->
+        <View
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-40dp"
+            android:layout_marginTop="-40dp"
+            android:alpha="0.08"
+            android:background="@drawable/ic_circle_accent"/>
+
+        <!-- TEXT CONTENT -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <!-- Tag -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY’S MENU"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#BF360C"
+                android:background="@drawable/bg_tag_glass"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:letterSpacing="0.1"/>
+
+            <!-- Main Menu -->
+            <TextView
+                android:id="@+id/txtMenuItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Dal • 2 Roti • Rice "
+                android:textColor="#3E2723"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!-- Sub text -->
+            <TextView
+                android:id="@+id/txtMenuDesc"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Freshly cooked • Ready by 1 PM"
+                android:textColor="#6D4C41"
+                android:textSize="12sp"/>
+
+            <!-- Button -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:text="View Menu"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#FA0C3F"/>
+        </LinearLayout>
+
+        <!-- FOOD IMAGE -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/i2"
+            android:layout_marginStart="10dp"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            app:strokeWidth="3dp"
+            app:strokeColor="#FFFFFF"/>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
+<!--
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -88,57 +184,4 @@
             app:shapeAppearanceOverlay="@style/CircleImage" />
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
-<!--
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:layout_marginTop="10dp"
-    app:cardCornerRadius="20dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FAD7C8"
-        android:padding="14dp">
-
-        <TextView
-            android:id="@+id/t1"
-            android:text="20% OFF"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="#222"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="Avail discount on your first order"
-            android:textSize="12sp"
-            android:textColor="#555"
-            android:layout_below="@id/t1"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:text="Order Now"
-            android:textSize="12sp"
-            android:textColor="#fff"
-            android:backgroundTint="#E08B45"
-            android:layout_alignParentBottom="true"
-            android:layout_width="110dp"
-            android:layout_height="38dp"/>
-
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/food1"
-            android:scaleType="centerCrop"/>
-
-    </RelativeLayout>
-
-</androidx.cardview.widget.CardView>
 -->

@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Today's Offers"
+                android:text="Today's Menu"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_marginTop="18dp"/>
@@ -78,10 +78,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
-
-
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+    <include
+        android:id="@+id/bottomBarMain"
+        layout="@layout/layout_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <!-- Bottom Navigation -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomBar"
@@ -136,6 +138,7 @@
                 android:foregroundGravity="center">
 
                 <LinearLayout
+                    android:id="@+id/profileLayout"
                     android:layout_width="58dp"
                     android:layout_height="58dp"
                     android:layout_gravity="center"

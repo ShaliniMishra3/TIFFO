@@ -1,6 +1,8 @@
 package com.example.tiffo
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         binding.rvPopular.layoutManager= LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         binding.rvNear.layoutManager= LinearLayoutManager(this)
 
+        binding.bottomBarMain.navProfile.setOnClickListener {
+            val intent= Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
         viewModel.categories.observe(this){
             binding.rvCategory.adapter= CategoryAdapter(it)
         }

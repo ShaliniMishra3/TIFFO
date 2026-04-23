@@ -9,10 +9,10 @@ import com.example.tiffo.model.FoodItem
 class MainViewModel: ViewModel() {
     val categories= MutableLiveData(
         listOf(
-            Category("Veg", R.drawable.ic_veg),
-            Category("Non Veg", R.drawable.ic_non_veg),
-            Category("Keto", R.drawable.ic_keto),
-            Category("Vegan", R.drawable.ic_vegan)        )
+            Category("Breakfast", R.drawable.ic_veg),
+            Category("Launch", R.drawable.ic_launch),
+            Category("Snack", R.drawable.ic_snack),
+            Category("Dinner", R.drawable.ic_dinner)        )
     )
     val popular = MutableLiveData(sample())
     val near = MutableLiveData(sample())

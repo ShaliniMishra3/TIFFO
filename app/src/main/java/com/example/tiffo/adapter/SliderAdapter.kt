@@ -7,22 +7,20 @@ import com.example.tiffo.databinding.ItemSliderBinding
 
 class SliderAdapter(private val images: List<Int>):
       RecyclerView.Adapter<SliderAdapter.SliderViewHolder>(){
-
-    inner class SliderViewHolder(val binding: ItemSliderBinding): RecyclerView.ViewHolder(binding.root)
+          class SliderViewHolder(val binding: ItemSliderBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewtype: Int
-    ): SliderAdapter.SliderViewHolder {
+    ): SliderViewHolder {
         val binding= ItemSliderBinding.inflate(
            LayoutInflater.from(parent.context),parent,false)
        return SliderViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: SliderAdapter.SliderViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SliderViewHolder, position: Int) {
       holder.binding.image.setImageResource(images[position])
     }
-
     override fun getItemCount(): Int {
         return images.size
     }
