@@ -2,7 +2,6 @@ package com.example.tiffo
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity

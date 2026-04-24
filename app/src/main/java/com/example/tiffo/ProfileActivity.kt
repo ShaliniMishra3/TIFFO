@@ -30,31 +30,6 @@ class ProfileActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             finish()
         }
-        /*
-        val privacy = findViewById<View>(R.id.itemPrivacy)
-        privacy.findViewById<TextView>(R.id.txtTitle).text = "Privacy & Settings"
-        privacy.findViewById<TextView>(R.id.txtDesc).text = "Make changes to your account"
-        //privacy.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_setting)
-
-        val orders = findViewById<View>(R.id.itemOrders)
-        orders.findViewById<TextView>(R.id.txtTitle).text = "Order History"
-        orders.findViewById<TextView>(R.id.txtDesc).text = "See your past orders"
-       // orders.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_order)
-
-        orders.findViewById<TextView>(R.id.txtTitle).text = "Payment and Refunds"
-        orders.findViewById<TextView>(R.id.txtDesc).text = "manage your billing and payments"
-
-        orders.findViewById<TextView>(R.id.txtTitle).text = "Manage Address"
-        orders.findViewById<TextView>(R.id.txtDesc).text = "edit all your registered address"
-
-        orders.findViewById<TextView>(R.id.txtTitle).text = "Help and Support"
-        orders.findViewById<TextView>(R.id.txtDesc).text = "Contact us about any issue"
-
-        orders.findViewById<TextView>(R.id.txtTitle).text = "Log Out"
-        orders.findViewById<TextView>(R.id.txtDesc).text = "Logout of the app"
-
-
-         */
         // Privacy
         val privacy = findViewById<View>(R.id.itemPrivacy)
         privacy.findViewById<TextView>(R.id.txtTitle).text = "Privacy & Settings"
@@ -67,26 +42,26 @@ class ProfileActivity : AppCompatActivity() {
         orders.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_order)
 
 
-// Payment
+        // Payment
         val payment = findViewById<View>(R.id.itemPayment)
         payment.findViewById<TextView>(R.id.txtTitle).text = "Payment & Refunds"
         payment.findViewById<TextView>(R.id.txtDesc).text = "Manage billing and payments"
         payment.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_payment)
 
-// Address
+         // Address
         val address = findViewById<View>(R.id.itemAddress)
         address.findViewById<TextView>(R.id.txtTitle).text = "Manage Address"
         address.findViewById<TextView>(R.id.txtDesc).text = "Edit your registered addresses"
         address.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_address)
 
-// Help
+         // Help
         val help = findViewById<View>(R.id.itemHelp)
         help.findViewById<TextView>(R.id.txtTitle).text = "Help & Support"
         help.findViewById<TextView>(R.id.txtDesc).text = "Contact us about any issue"
         help.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_help)
 
 
-// Logout
+         // Logout
         val logout = findViewById<View>(R.id.itemLogout)
         logout.findViewById<TextView>(R.id.txtTitle).text = "Log Out"
         logout.findViewById<TextView>(R.id.txtDesc).text = "Logout of the app"

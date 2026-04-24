@@ -16,11 +16,7 @@ class FoodAdapter(private val list: List<FoodItem>, private val horizontal:Boole
         val txtDesc: TextView = itemView.findViewById(R.id.txtDesc)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        /*
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_food, parent, false)
-        return VH(view)
-        */
+
         val layoutId = if (horizontal) {
             R.layout.item_near
         } else {
