@@ -45,6 +45,31 @@
                 android:layout_marginTop="2dp"/>
         </LinearLayout>
 
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/navSubscription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_profile"
+                app:tint="#FFF5F8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="10sp"
+                android:textColor="#FFF5F8"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+
         <!-- Home Selected -->
         <FrameLayout
             android:layout_width="0dp"
@@ -63,6 +88,12 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cart"
+                    app:tint="#FFF5F8" />
+
+                <ImageView
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_home"
@@ -72,9 +103,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Home"
+                    android:textColor="#D9468F"
                     android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:textColor="#D9468F"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </FrameLayout>
@@ -111,12 +142,6 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_cart"
-                app:tint="#FFF5F8" />
 
             <TextView
                 android:layout_width="wrap_content"

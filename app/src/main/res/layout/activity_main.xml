@@ -21,7 +21,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textStyle="bold" android:textSize="24sp" android:textColor="#222"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#222"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A-258, Sector 47, Noida.." android:textSize="12sp" android:textColor="#777" android:layout_marginTop="2dp"/>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

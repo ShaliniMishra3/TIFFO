@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +34,7 @@ class ProfileActivity : AppCompatActivity() {
         privacy.findViewById<TextView>(R.id.txtTitle).text = "Privacy & Settings"
         privacy.findViewById<TextView>(R.id.txtDesc).text = "Make changes to your account"
 
-// Orders
+        // Orders
         val orders = findViewById<View>(R.id.itemOrders)
         orders.findViewById<TextView>(R.id.txtTitle).text = "Order History"
         orders.findViewById<TextView>(R.id.txtDesc).text = "See your past orders"
