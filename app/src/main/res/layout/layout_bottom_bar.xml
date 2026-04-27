@@ -45,29 +45,6 @@
                 android:layout_marginTop="2dp"/>
         </LinearLayout>
 
-        <!-- Profile -->
-        <LinearLayout
-            android:id="@+id/navSubscription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_profile"
-                app:tint="#FFF5F8" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile"
-                android:textSize="10sp"
-                android:textColor="#FFF5F8"
-                android:layout_marginTop="2dp"/>
-        </LinearLayout>
 
 
         <!-- Home Selected -->
@@ -79,7 +56,6 @@
 
             <LinearLayout
                 android:id="@+id/navHome"
-
                 android:layout_width="58dp"
                 android:layout_height="58dp"
                 android:layout_gravity="center"
@@ -89,7 +65,7 @@
 
                 <ImageView
                     android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/ic_cart"
                     app:tint="#FFF5F8" />
 
@@ -142,6 +118,11 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_cart"
+                app:tint="#FFF5F8" />
 
             <TextView
                 android:layout_width="wrap_content"

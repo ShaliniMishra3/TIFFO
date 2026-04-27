@@ -19,16 +19,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.rvCategory.layoutManager= GridLayoutManager(this,4)
-        binding.rvPopular.layoutManager= LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        binding.rvNear.layoutManager= LinearLayoutManager(this)
+        binding.rvCategory.layoutManager = GridLayoutManager(this, 4)
+        binding.rvPopular.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvNear.layoutManager = LinearLayoutManager(this)
+
         binding.bottomBarMain.navProfile.setOnClickListener {
             val intent= Intent(this, ProfileActivity::class.java)
             startActivity(intent)
@@ -41,14 +43,17 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this, CartActivity::class.java)
             startActivity(intent)
         }
-        viewModel.categories.observe(this){
-            binding.rvCategory.adapter= CategoryAdapter(it)
+
+
+
+        viewModel.categories.observe(this) {
+            binding.rvCategory.adapter = CategoryAdapter(it)
         }
-        viewModel.popular.observe(this){
-            binding.rvPopular.adapter= FoodAdapter(it,true)
+        viewModel.popular.observe(this) {
+            binding.rvPopular.adapter = FoodAdapter(it, true)
         }
-        viewModel.near.observe(this){
-            binding.rvNear.adapter= FoodAdapter(it,false)
+        viewModel.near.observe(this) {
+            binding.rvNear.adapter = FoodAdapter(it, false)
         }
     }
 }

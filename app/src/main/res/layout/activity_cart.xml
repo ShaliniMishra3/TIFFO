@@ -86,6 +86,7 @@
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -217,10 +218,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:background="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
