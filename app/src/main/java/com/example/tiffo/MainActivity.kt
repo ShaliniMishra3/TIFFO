@@ -29,9 +29,16 @@ class MainActivity : AppCompatActivity() {
         binding.rvCategory.layoutManager= GridLayoutManager(this,4)
         binding.rvPopular.layoutManager= LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         binding.rvNear.layoutManager= LinearLayoutManager(this)
-
         binding.bottomBarMain.navProfile.setOnClickListener {
             val intent= Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+        binding.bottomBarMain.navOrders.setOnClickListener {
+            val intent= Intent(this, OrderActivity::class.java)
+            startActivity(intent)
+        }
+        binding.bottomBarMain.navCart.setOnClickListener {
+            val intent= Intent(this, CartActivity::class.java)
             startActivity(intent)
         }
         viewModel.categories.observe(this){
