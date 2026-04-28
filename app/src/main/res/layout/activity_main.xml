@@ -13,7 +13,7 @@
         android:fillViewport="true"
         android:clipToPadding="false"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBarMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <LinearLayout
@@ -28,7 +28,13 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:textColor="#222"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A-258, Sector 47, Noida.." android:textSize="12sp" android:textColor="#777" android:layout_marginTop="2dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A-258, Sector 47, Noida.."
+                android:textSize="12sp"
+                android:textColor="#777"
+                android:layout_marginTop="2dp"/>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
@@ -80,13 +86,14 @@
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
     <include
         android:id="@+id/bottomBarMain"
         layout="@layout/layout_bottom_bar"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
+
+<!--
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomBar"
         android:layout_width="0dp"
@@ -107,21 +114,18 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center">
-
-        <FrameLayout
+            <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
-            <LinearLayout
+                <LinearLayout
                 android:id="@+id/navProfile"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical">
-
-                <ImageView
+                    <ImageView
                     android:id="@+id/iconProfile"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
@@ -237,6 +241,6 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-
+-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

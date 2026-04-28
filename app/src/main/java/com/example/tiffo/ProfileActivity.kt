@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import android.view.ViewGroup
 import androidx.core.view.WindowInsetsCompat
 import com.example.tiffo.databinding.ActivityProfileBinding
 
@@ -23,13 +24,32 @@ class ProfileActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        selectTab(binding.bottomBar.navProfile)
+
         binding.bottomBar.navHome.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            selectTab(binding.bottomBar.navHome)
+        }
+
+        binding.bottomBar.navProfile.setOnClickListener {
+            // already here, just highlight
+            selectTab(binding.bottomBar.navProfile)
+        }
+
+        binding.bottomBar.navOrders.setOnClickListener {
+            // open OrdersActivity
+            selectTab(binding.bottomBar.navOrders)
+
+        }
+
+        binding.bottomBar.navCart.setOnClickListener {
+            // open CartActivity
+            selectTab(binding.bottomBar.navCart)
         }
         binding.btnBack.setOnClickListener {
             finish()
         }
-        // Privacy
+        // Privacy terms
         val privacy = findViewById<View>(R.id.itemPrivacy)
         privacy.findViewById<TextView>(R.id.txtTitle).text = "Privacy & Settings"
         privacy.findViewById<TextView>(R.id.txtDesc).text = "Make changes to your account"
@@ -40,31 +60,63 @@ class ProfileActivity : AppCompatActivity() {
         orders.findViewById<TextView>(R.id.txtDesc).text = "See your past orders"
         orders.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_order)
 
-
         // Payment
         val payment = findViewById<View>(R.id.itemPayment)
         payment.findViewById<TextView>(R.id.txtTitle).text = "Payment & Refunds"
         payment.findViewById<TextView>(R.id.txtDesc).text = "Manage billing and payments"
         payment.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_payment)
 
-         // Address
+        // Address
         val address = findViewById<View>(R.id.itemAddress)
         address.findViewById<TextView>(R.id.txtTitle).text = "Manage Address"
         address.findViewById<TextView>(R.id.txtDesc).text = "Edit your registered addresses"
         address.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_address)
 
-         // Help
+        // Help
         val help = findViewById<View>(R.id.itemHelp)
         help.findViewById<TextView>(R.id.txtTitle).text = "Help & Support"
         help.findViewById<TextView>(R.id.txtDesc).text = "Contact us about any issue"
         help.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_help)
 
-
-         // Logout
+        // Logout
         val logout = findViewById<View>(R.id.itemLogout)
         logout.findViewById<TextView>(R.id.txtTitle).text = "Log Out"
         logout.findViewById<TextView>(R.id.txtDesc).text = "Logout of the app"
         logout.findViewById<ImageView>(R.id.imgIcon).setImageResource(R.drawable.ic_logout)
 
     }
+
+    private fun selectTab(selected: View) {
+
+        val tabs = listOf(
+            binding.bottomBar.navHome,
+            binding.bottomBar.navProfile,
+            binding.bottomBar.navOrders,
+            binding.bottomBar.navCart
+        )
+
+        tabs.forEach { tab ->
+
+            val container = tab as ViewGroup   // ✅ FIX
+
+            container.setBackgroundResource(0)
+
+            val icon = container.getChildAt(0) as ImageView
+            val text = container.getChildAt(1) as TextView
+
+            icon.setColorFilter(getColor(R.color.white))
+            text.setTextColor(getColor(R.color.white))
+        }
+
+        val selectedContainer = selected as ViewGroup
+
+        selectedContainer.setBackgroundResource(R.drawable.bg_bottom_selected)
+
+        val icon = selectedContainer.getChildAt(0) as ImageView
+        val text = selectedContainer.getChildAt(1) as TextView
+
+        icon.setColorFilter(getColor(R.color.red))
+        text.setTextColor(getColor(R.color.red))
+    }
+
 }

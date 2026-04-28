@@ -145,7 +145,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
     <!-- Bottom Bar (Same as Home) -->
     <include
         android:id="@+id/bottomBar"
